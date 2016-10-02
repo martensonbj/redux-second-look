@@ -23625,8 +23625,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./styles.css", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./styles.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23644,7 +23644,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background: #cec2c2;\n  font-family: helvetica, sans-serif;\n  font-weight: 100;\n  letter-spacing: 2px;\n  text-transform: uppercase;;\n}\n\nh3 {\n    position: relative;\n    top: 50px;\n    font-weight: 100;\n    font-size: 30px;\n    color: #5a5959;\n    text-align: center;\n}\n\nbutton {\n    padding: 20px;\n    border-radius: 2px;\n    outline: none;\n    border: none;\n    background: #982292;\n    color: white;\n    margin: 10px;\n    width: 100px;\n    font-family: helvetica, sans-serif;\n    font-weight: 100;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n\nbutton:hover {\n  background: rgba(0,0,0,0.8);\n  cursor: pointer;\n}\n\n.LikesCounter {\n  height: 300px;\n  width: 300px;\n  margin: 78px auto;\n  background: rgba(255,255,255,0.4);\n}\n\n.ActionButtons {\n  width: 240px;\n  margin: 100px auto 0 auto;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background: #ff009f;\n  font-family: helvetica, sans-serif;\n  font-weight: 100;\n  letter-spacing: 2px;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 

@@ -4,7 +4,6 @@ import FilteredTodoList from '../containers/FilteredTodoList'
 import Footer from '../components/Footer'
 
 class App extends React.Component {
-  debugger;
   render(){
     return(
       <section>
