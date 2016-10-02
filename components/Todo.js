@@ -2,7 +2,6 @@ import React from 'react'
 
 const Todo = ({ onClick, completed, text }) => {
   console.log('in single todo')
-  debugger;
   return (
     <li
       onClick={ onClick }

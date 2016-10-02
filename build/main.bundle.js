@@ -23433,21 +23433,11 @@
 	var TodoList = function TodoList(_ref) {
 	  var todos = _ref.todos;
 	  var onTodoClick = _ref.onTodoClick;
-
-	  console.log("inTodoList");
-	  if (todos.length === 0) {
-	    return _react2.default.createElement(
-	      'h3',
-	      null,
-	      'You have nothing to do!'
-	    );
-	  }
-
 	  return _react2.default.createElement(
 	    'ul',
 	    null,
 	    todos.map(function (todo) {
-	      _react2.default.createElement(_Todo2.default, _extends({
+	      return _react2.default.createElement(_Todo2.default, _extends({
 	        key: todo.id
 	      }, todo, {
 	        onClick: function onClick() {
@@ -23482,7 +23472,6 @@
 	  var text = _ref.text;
 
 	  console.log('in single todo');
-	  debugger;
 	  return _react2.default.createElement(
 	    'li',
 	    {
