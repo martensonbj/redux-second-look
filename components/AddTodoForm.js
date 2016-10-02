@@ -7,9 +7,8 @@ let AddTodoForm = ({ onSubmit }) => {
     <section>
       <form onSubmit={ (e) => {
           e.preventDefault()
-          {onSubmit(input.value)}
-      }}
-      >
+          onSubmit(input.value)
+      }}>
         <input ref={ node => { input = node }} />
         <button>Add Todo</button>
       </form>

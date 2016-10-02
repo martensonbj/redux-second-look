@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import todos from './todos'
-import filter from './filter'
+import setFilter from './setFilter'
 
-const todoApp = combineReducers({
+const reducers = combineReducers({
   todos,
-  filter
+  setFilter
 })
 
-export default todoApp
+export default reducers

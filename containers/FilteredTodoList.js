@@ -16,12 +16,14 @@ const getFilteredTodos = (todos, filter) => {
   }
 }
 
-// What part of state does our component need to know how to render appropriately?
-const mapStateToProps = (state) => {
-  todos: getFilteredTodos(state.todos, state.setFilter)
-}
+// What part(s) of state does the component care about?
 
-// What are we handing down as an event listener (also coming through as a prop), and what reducer is organizing what that action needs?
+const mapStateToProps = (state) => ({
+  todos: getFilteredTodos(state.todos, state.setFilter)
+})
+
+// What are we handing down via props as an event listener, and what reducer is organizing what that action needs?
+
 const mapDispatchToProps = ({
   onTodoClick: toggleTodo
 })

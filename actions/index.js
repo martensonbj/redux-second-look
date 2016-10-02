@@ -1,9 +1,7 @@
-let lastTodoId = 0
-
-export const addTodo = (data) => {
+export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
-    id: lastTodoId++,
+    id: Date.now(),
     text,
     completed: false
   }
