@@ -6,11 +6,14 @@ import Footer from '../components/Footer'
 class App extends React.Component {
   render(){
     return(
-      <section>
-        <AddTodo />
-        <FilteredTodoList />
-        <Footer />
-      </section>
+      <div>
+        <h1>Pumpkin List</h1>
+        <section id="todo-list">
+          <AddTodo />
+          <FilteredTodoList />
+          <Footer />
+        </section>
+      </div>
     )
   }
 }

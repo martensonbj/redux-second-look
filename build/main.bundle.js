@@ -23230,11 +23230,20 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'section',
+	        'div',
 	        null,
-	        _react2.default.createElement(_AddTodo2.default, null),
-	        _react2.default.createElement(_FilteredTodoList2.default, null),
-	        _react2.default.createElement(_Footer2.default, null)
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Todo List With Redux!'
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'todo-list' },
+	          _react2.default.createElement(_AddTodo2.default, null),
+	          _react2.default.createElement(_FilteredTodoList2.default, null),
+	          _react2.default.createElement(_Footer2.default, null)
+	        )
 	      );
 	    }
 	  }]);
@@ -23644,7 +23653,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background: #ff009f;\n  font-family: helvetica, sans-serif;\n  font-weight: 100;\n  letter-spacing: 2px;\n  text-transform: uppercase; }\n", ""]);
+	exports.push([module.id, "body {\n  background: #ff9300;\n  font-family: helvetica, sans-serif;\n  font-weight: 100;\n  letter-spacing: 2px;\n  text-transform: uppercase; }\n\n#todo-list {\n  max-width: 500px;\n  margin: 0 auto;\n  background: white;\n  background: -webkit-linear-gradient(legacy-direction(red), white);\n  background: linear-gradient(#ff9300, #ffb44d);\n  padding: 14px;\n  text-align: center;\n  margin-top: 100px;\n  box-shadow: 0px 3px 10px #313030;\n  border-radius: 10px; }\n\nform {\n  height: 80px; }\n\ninput {\n  margin: 0 auto;\n  outline: none;\n  border: none;\n  border-radius: 3px;\n  font-size: 14px;\n  font-weight: 100;\n  color: #494949;\n  padding: 11px;\n  text-align: center; }\n\nbutton {\n  padding: 14px;\n  background: rgba(255, 90, 0, 0.74);\n  outline: none;\n  border-radius: 5px;\n  border: none;\n  color: white;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-weight: 100;\n  margin-left: 10px; }\n  button:hover {\n    cursor: pointer;\n    background: rgba(255, 90, 0, 0.22); }\n\nul {\n  width: 50%;\n  margin: 0 auto;\n  text-align: left; }\n\nli {\n  margin: 10px 0 10px -20px;\n  list-style-type: circle; }\n\nfooter {\n  border-top: 1px dashed #000;\n  padding-top: 20px; }\n\nfooter span, footer a {\n  margin: 10px; }\n\na {\n  color: #ff4100; }\n", ""]);
 
 	// exports
 

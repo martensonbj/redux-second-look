@@ -1,4 +1,4 @@
-require('./styles')
+require('./main')
 
 import React from 'react'
 import { render } from 'react-dom'
