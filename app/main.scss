@@ -1,5 +1,6 @@
 $main-background: #ff9300;
-$button-background: #982292;
+$button-background: rgba(255, 90, 0, 0.74);
+$button-hover: rgba(255, 90, 0, 0.22);
 $faded-background: rgba(255,255,255,0.4);
 
 @mixin light-font {
@@ -8,13 +9,6 @@ $faded-background: rgba(255,255,255,0.4);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
-@mixin linear-gradient($direction, $color-stops...) {
-  background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  background: linear-gradient($direction, $color-stops);
-}
-
 body {
   background: $main-background;
   @include light-font;
@@ -32,7 +26,7 @@ h1 {
   max-width: 500px;
   margin: 0 auto;
   background: white;
-  background: -webkit-linear-gradient(legacy-direction(red), white);
+  background: -webkit-linear-gradient(legacy-direction(#ff9300), #ffb44d);
   background: linear-gradient(#ff9300, #ffb44d);
   padding: 14px;
   text-align: center;
@@ -54,7 +48,7 @@ input {
 
 button {
     padding: 14px;
-    background: rgba(255, 90, 0, 0.74);
+    background: $button-background;
     outline: none;
     border-radius: 5px;
     border: none;
@@ -65,7 +59,7 @@ button {
     margin-left: 10px;
     &:hover {
       cursor: pointer;
-      background: rgba(255, 90, 0, 0.22);
+      background: $button-hover;
     }
 }
 
