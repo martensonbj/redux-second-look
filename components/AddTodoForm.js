@@ -10,6 +10,7 @@ let AddTodoForm = ({ onSubmit }) => {
           onSubmit(input.value)
       }}>
         <input ref={ node => { input = node }} />
+        {console.log}
         <button>Add Todo</button>
       </form>
     </section>
