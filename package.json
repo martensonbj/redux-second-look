@@ -1,7 +1,7 @@
 {
-  "name": "react-in-theory",
+  "name": "redux-second-look",
   "version": "1.0.0",
-  "description": "A tutorial for building a react app for Turing School",
+  "description": "A tutorial for building a react/remote-redux-devtools app for Turing School",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martensonbj/react-in-theory.git"
+    "url": "git+https://github.com/martensonbj/redux-second-look.git"
   },
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
   "author": "Brenna Martenson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/martensonbj/react-in-theory/issues"
+    "url": "https://github.com/martensonbj/redux-second-look/issues"
   },
-  "homepage": "https://github.com/martensonbj/react-in-theory#readme",
+  "homepage": "https://github.com/martensonbj/redux-second-look#readme",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
