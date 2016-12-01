@@ -5,26 +5,29 @@ import AddTodoFormContainer from '../../src/containers/AddTodoFormContainer'
 import AddTodoForm from '../../src/components/AddTodoForm'
 
 import { Provider } from 'react-redux'
-import { fakeStore } from './fakeStore'
-
+// import { fakeStore } from './fakeStore'
+import configureMockStore from 'redux-mock-store'
+const store = configureMockStore()({todos: []})
+console.log(store);
 const setup = () => {
   const props = {
-    handleSubmit: jest.fn()
+    handleSubmit: jest.fn(),
+    todos: []
   }
 
-  const store = fakeStore({ todos: [] })
-
   const wrapper = mount(
-    <Provider store={store}>
-      <AddTodoFormContainer {...props}/>
-    </Provider>
+    // <Provider store={store}>
+    //   <AddTodoFormContainer {...props}/>
+    // </Provider>
+
+    <AddTodoForm handleSubmit={props.handleSubmit} todos={props.todos} />
   )
 
-  const Component = wrapper.find(AddTodoFormContainer)
+  const Container = wrapper.find(AddTodoFormContainer)
+  const Component = wrapper.find(AddTodoForm)
 
   return {
     props,
-    wrapper,
     Component
   }
 }
@@ -32,19 +35,21 @@ const setup = () => {
 describe('components', () => {
   describe('AddTodoForm', () => {
 
-    it('should render a form', () => {
-      const { wrapper } = setup()
+  it('should render a form', () => {
+      const { Component } = setup()
 
-      expect(wrapper.find('form').length).toEqual(1)
+      expect(Component.find('form').length).toEqual(1)
 
-      expect(wrapper.length).toEqual(1)
+      expect(Component.length).toEqual(1)
     })
 
     it('should call addTodo when Add Todo button is clicked', () => {
-      const { props, wrapper, Component } = setup()
+      const { props, Component } = setup()
 
-      Component.find('form').simulate('submit')
+      let form = Component.find('form')
 
+      form.simulate('submit')
+      console.log(props);
       expect(props.handleSubmit).toBeCalled()
 
     // Or to verify how many times a function has been called
