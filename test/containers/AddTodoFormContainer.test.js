@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 // import { fakeStore } from './fakeStore'
 import configureMockStore from 'redux-mock-store'
 const store = configureMockStore()({todos: []})
-console.log(store);
+
 const setup = () => {
   const props = {
     handleSubmit: jest.fn(),
