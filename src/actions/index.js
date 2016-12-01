@@ -1,8 +1,8 @@
-export const addTodo = (text) => {
+export const addTodo = (text, id) => {
   return {
     type: 'ADD_TODO',
     text,
-    id: Date.now()
+    id
   }
 }
 
