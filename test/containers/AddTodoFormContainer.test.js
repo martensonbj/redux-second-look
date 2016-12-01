@@ -7,7 +7,6 @@ import AddTodoForm from '../../src/components/AddTodoForm'
 import { Provider } from 'react-redux'
 import { fakeStore } from './fakeStore'
 
-
 const setup = () => {
   const props = {
     handleSubmit: jest.fn()
@@ -15,20 +14,18 @@ const setup = () => {
 
   const store = fakeStore({ todos: [] })
 
-
   const wrapper = mount(
     <Provider store={store}>
       <AddTodoFormContainer {...props}/>
     </Provider>
   )
 
-  const Component = wrapper.find(AddTodoForm)
-  const Container = wrapper.find(AddTodoFormContainer)
+  const Component = wrapper.find(AddTodoFormContainer)
 
   return {
     props,
-    Component,
-    Container
+    wrapper,
+    Component
   }
 }
 
@@ -36,25 +33,22 @@ describe('components', () => {
   describe('AddTodoForm', () => {
 
     it('should render a form', () => {
-      const { Component, Container } = setup()
+      const { wrapper } = setup()
 
+      expect(wrapper.find('form').length).toEqual(1)
 
-
-      expect(Component.length).toEqual(1)
-      expect(Component.find('form').length).toEqual(1)
-
-      expect(Container.length).toEqual(1)
+      expect(wrapper.length).toEqual(1)
     })
 
     it('should call addTodo when Add Todo button is clicked', () => {
-    const { props, Container, Component } = setup()
+      const { props, wrapper, Component } = setup()
 
-    Component.find('button').simulate('click')
+      Component.find('form').simulate('submit')
 
-    expect(props.handleSubmit).toBeCalled()
+      expect(props.handleSubmit).toBeCalled()
 
     // Or to verify how many times a function has been called
-    expect(props.handleSubmit.mock.calls.length).toBe(1)
+      expect(props.handleSubmit.mock.calls.length).toBe(1)
   })
   })
 })
